@@ -1,5 +1,6 @@
 import Button from "./components/button/Button"
 import Avatar from "./components/avatar/Avatar"
+import profilePic from "./assets/bob.jpg"
 
 export default function App() {
   return (
@@ -14,11 +15,13 @@ export default function App() {
       <Button variant="success" >Success</Button>
       <Button variant="warning">Warning</Button>
       <Button variant="danger">Danger</Button>
+      <br />
       <h2>Avatar</h2>
-      <Avatar src="./images/bob.jpg" alt="Bob Ziroll" />
-      <br />
+      <p>Can pass a src and alt property to the Avatar (e.g. {`<Avatar src="./images/bob.jpg" alt="Bob Ziroll" />`})</p>
+      <Avatar src={profilePic} alt="Bob Ziroll" />
+      <p>Can pass initials as the Avatar's child (e.g. {`<Avatar>BZ</Avatar>`})</p>
       <Avatar>BZ</Avatar>
-      <br />
+      <p>Default Avatar</p>
       <Avatar />
     </>
   )
