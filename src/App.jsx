@@ -5,7 +5,7 @@ export default function App() {
     <>
       <h1>React Component Library</h1>
       <h2>Buttons</h2>
-      <p>Can use the class names "sm" and "lg" to get smaller/larger buttons</p>
+      <p>Can give the button a size property of "sm" or "lg" (e.g. {`<Button size="sm">Small</Button>`}) to get smaller/larger buttons</p>
       <Button size="sm" >Small</Button>
       <Button >Normal</Button>
       <Button size="lg">Large</Button>
