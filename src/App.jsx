@@ -3,10 +3,7 @@ import Button from "./components/button/Button"
 import Avatar from "./components/avatar/Avatar"
 import profilePic from "./assets/bob.jpg"
 
-import Menu from "./components/menu/Menu"
-import MenuButton from "./components/menu/MenuButton"
-import MenuDropdown from "./components/menu/MenuDropdown"
-import MenuItem from "./components/menu/MenuItem"
+import Menu from "./components/menu/index"
 
 export default function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
@@ -33,11 +30,11 @@ export default function App() {
       <br />
       <h2>Menu</h2>
       <Menu>
-        <MenuButton>Sports</MenuButton>
+        <Menu.Button>Sports</Menu.Button>
 
-        <MenuDropdown>
-          {sports.map((sport) => <MenuItem key={sport}>{sport}</MenuItem>)}
-        </MenuDropdown>
+        <Menu.Dropdown>
+          {sports.map((sport) => <Menu.Item key={sport}>{sport}</Menu.Item>)}
+        </Menu.Dropdown>
       </Menu>
       <br />
     </>
