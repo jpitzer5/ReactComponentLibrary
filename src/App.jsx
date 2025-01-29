@@ -6,18 +6,20 @@ import profilePic from "./assets/bob.jpg"
 import Menu from "./components/menu/Menu"
 import MenuButton from "./components/menu/MenuButton"
 import MenuDropdown from "./components/menu/MenuDropdown"
+import MenuItem from "./components/menu/MenuItem"
 
 export default function App() {
+  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
   return (
     <>
       <h1>React Component Library</h1>
       <h2>Menu</h2>
       <Menu>
-        <MenuButton
-            buttonText="Sports"
-        />
+        <MenuButton>Sports</MenuButton>
 
-        <MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
+        <MenuDropdown>
+          {sports.map((sport) => <MenuItem key={sport}>{sport}</MenuItem>)}
+        </MenuDropdown>
       </Menu>
       <br />
       <h2>Buttons</h2>
