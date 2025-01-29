@@ -13,15 +13,6 @@ export default function App() {
   return (
     <>
       <h1>React Component Library</h1>
-      <h2>Menu</h2>
-      <Menu>
-        <MenuButton>Sports</MenuButton>
-
-        <MenuDropdown>
-          {sports.map((sport) => <MenuItem key={sport}>{sport}</MenuItem>)}
-        </MenuDropdown>
-      </Menu>
-      <br />
       <h2>Buttons</h2>
       <p>Can give the button a size property of "sm" or "lg" (e.g. {`<Button size="sm">Small</Button>`}) to get smaller/larger buttons</p>
       <Button size="sm" >Small</Button>
@@ -40,7 +31,15 @@ export default function App() {
       <p>Default Avatar</p>
       <Avatar />
       <br />
-      
+      <h2>Menu</h2>
+      <Menu>
+        <MenuButton>Sports</MenuButton>
+
+        <MenuDropdown>
+          {sports.map((sport) => <MenuItem key={sport}>{sport}</MenuItem>)}
+        </MenuDropdown>
+      </Menu>
+      <br />
     </>
   )
 }
