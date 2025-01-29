@@ -9,6 +9,10 @@ export default function App() {
       <Button size="sm" >Small</Button>
       <Button >Normal</Button>
       <Button size="lg">Large</Button>
+      <p>Can give the button a variant property of "success", "warning", or "danger" (e.g. {`<Button variant="success">Success</Button>`}) to get different colored buttons</p>
+      <Button variant="success" >Success</Button>
+      <Button variant="warning">Warning</Button>
+      <Button variant="danger">Danger</Button>
     </>
   )
 }
