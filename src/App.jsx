@@ -1,4 +1,5 @@
 import Button from "./components/button/Button"
+import Avatar from "./components/avatar/Avatar"
 
 export default function App() {
   return (
@@ -13,6 +14,12 @@ export default function App() {
       <Button variant="success" >Success</Button>
       <Button variant="warning">Warning</Button>
       <Button variant="danger">Danger</Button>
+      <h2>Avatar</h2>
+      <Avatar src="./images/bob.jpg" alt="Bob Ziroll" />
+      <br />
+      <Avatar>BZ</Avatar>
+      <br />
+      <Avatar />
     </>
   )
 }
