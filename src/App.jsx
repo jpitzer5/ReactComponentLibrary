@@ -1,11 +1,25 @@
 import Button from "./components/button/Button"
+
 import Avatar from "./components/avatar/Avatar"
 import profilePic from "./assets/bob.jpg"
+
+import Menu from "./components/menu/Menu"
+import MenuButton from "./components/menu/MenuButton"
+import MenuDropdown from "./components/menu/MenuDropdown"
 
 export default function App() {
   return (
     <>
       <h1>React Component Library</h1>
+      <h2>Menu</h2>
+      <Menu>
+        <MenuButton
+            buttonText="Sports"
+        />
+
+        <MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
+      </Menu>
+      <br />
       <h2>Buttons</h2>
       <p>Can give the button a size property of "sm" or "lg" (e.g. {`<Button size="sm">Small</Button>`}) to get smaller/larger buttons</p>
       <Button size="sm" >Small</Button>
@@ -23,6 +37,8 @@ export default function App() {
       <Avatar>BZ</Avatar>
       <p>Default Avatar</p>
       <Avatar />
+      <br />
+      
     </>
   )
 }
